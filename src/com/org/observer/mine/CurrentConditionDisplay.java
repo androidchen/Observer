@@ -3,10 +3,11 @@ package com.org.observer.mine;
 public class CurrentConditionDisplay implements Observer, DisplayElement {
 	private float temprature;
 	private float humidity;
-//	private Subject subject;
+
+	// private Subject subject;
 
 	public CurrentConditionDisplay(Subject subject) {
-//		this.subject = subject;
+		// this.subject = subject;
 		subject.registerObserver(this);
 	}
 
@@ -19,6 +20,6 @@ public class CurrentConditionDisplay implements Observer, DisplayElement {
 
 	@Override
 	public void display() {
-		System.out.println("temprature:" + temprature + ",humidity:" + humidity);
+		System.out.println("CurrentCondition : temprature:" + temprature + ",humidity:" + humidity);
 	}
 }
